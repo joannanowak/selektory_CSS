@@ -1,0 +1,58 @@
+div#outer{
+	color: yellow;
+}
+
+
+/*dla p w div outer*/
+div#outer > p{
+	color: red;
+}
+
+
+div>h2{
+	color: aqua;
+}
+
+/*stylujemy p*/
+
+div#outer > h2~p{
+	color: black;
+}
+
+/*Pierwszy paragraf szary*/
+div#outer > h2+p{
+	color: gray;
+}
+
+/*3 element potomny, h2 jest elementem*/
+div#outer > p:nth-child(3), div#inner > p:nth-child(2){
+	color: orange;
+}
+
+/*to samo, gdy 2 jest ostatni*/
+div#outer > p:nth-child(3), div#inner > p:last-child{
+	color: orange;
+}
+
+div#outer>p:not(.first){
+	color: red;
+}
+
+a.btn {
+	color: black;
+	text-decoration: none;
+	border: 1px solid black;
+	padding: 10px 20px;
+}
+
+a.btn-lg{
+	color: red;
+	padding: 20px 40;
+	font-size: 1.5em;
+}
+
+a.btn-alert{
+	color: yellow;
+	border-bottom-color: yellow;
+	border-radius: 30px;
+}
